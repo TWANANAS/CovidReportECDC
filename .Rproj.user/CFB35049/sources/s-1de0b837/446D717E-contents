@@ -1,0 +1,71 @@
+---
+stitle: "Covid report"
+author: "Twan Samsom"
+date: "11/12/2023"
+output: html_document
+params:
+  year:
+   value: 2020
+   input: select
+   choices: [2020,2021,2022]
+  months: 
+   value: 1
+   input: select
+   choices: [1,2,3,4,5,6,7,8,9,10,11,12]
+  country:
+    value: "Belgium"
+    input: select
+    choices: [Austria, Belgium, Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Netherlands, Norway, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, Sweden]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+library(ggplot2)
+library(lubridate)
+```
+
+```{bash, eval=FALSE}
+# Go to data_raw
+cd data_raw/ 
+
+# Download the flu dataset
+wget -O data.csv https://opendata.ecdc.europa.eu/covid19/nationalcasedeath_eueea_daily_ei/csv/data.csv
+```
+
+```{r}
+covid_data <- read.csv("data_raw/data.csv")
+```
+
+```{r}
+library(dplyr)
+
+# Filter data on the parameters
+filtered_data <- covid_data %>%
+  filter(
+    countriesAndTerritories == params$country,
+    year == params$year,
+    month == params$months
+  )
+
+```
+
+```{r}
+filtered_data$dateRep <- as.Date(filtered_data$dateRep, format = "%d/%m/%Y")
+
+ggplot(filtered_data, aes(x = dateRep, y = cases)) +
+  geom_line() +
+  labs(title = paste("COVID-19 Cases in", params$country, " (", params$months, "/", params$year, ")"),
+       x = "Date",
+       y = "Cases")
+```
+
+```{r}
+
+ggplot(filtered_data, aes(x = dateRep, y = deaths)) +
+  geom_line() +
+  labs(title = paste("COVID-19 Deaths in", params$country, " (", params$months, "/", params$year, ")"),
+       x = "Date",
+       y = "Deaths")
+
+```
