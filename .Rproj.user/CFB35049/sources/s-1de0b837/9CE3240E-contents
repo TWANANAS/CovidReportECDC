@@ -1,0 +1,51 @@
+---
+title: "CovidReportECDC"
+author: "Twan Samsom"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(CovidReportECDC)
+```
+
+# CovidReportECDC
+This R package can visualize covid data from 'European Centre for Disease Prevention and Control'.
+
+The package contains three functions:
+ 
+ - get_and_process_covid_data(): download the data from ECDC, and filter the data on country, year and month. 
+ - visualize_covid_data(data): which can be used to visiualize a dataframe with covid data from get_and_process_covid_data().
+ - plot_covid(): combines the previous two functions to directly make a plot from the arguments.
+ 
+I will show how to work with every function in this Rmd.
+
+Let's start with get_and_process_covid_data(), this functions needs the following arguments ("Country", year, months).
+```{r}
+coviddata_nl_2022_JanFebMar <-get_and_process_covid_data(country = "Netherlands", 2022, c(1,2,3) )  
+
+coviddata_nl_2022_JanFebMar %>% head()
+```
+Now you have a dataframe with the covid data in the Netherlands in the year 2022 from the months january, febuary and march.
+
+We can plot this data easly with the visualize_covid_data() function, this function needs only one argument and that is a dataframe from the get_and_process_covid_data() function
+
+```{r}
+visualize_covid_data(coviddata_nl_2022_JanFebMar)
+```
+
+This creates two plots, one for the covid cases and one for the covid related deaths.
+
+The last function plot_covid() combines the other two functions and needs the following arguments aswell ("Country", year, months).
+
+```{r}
+
+plot_covid(country = "Germany", 2022, c(6:10))
+
+```
+
+This immediately creates two plots.

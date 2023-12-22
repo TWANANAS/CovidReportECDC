@@ -1,1 +1,13 @@
 # CovidReportECDC
+This R package can visualize covid data from 'European Centre for Disease Prevention and Control'.
+
+The package contains three functions:
+ 
+ - get_and_process_covid_data(): download the data from ECDC, and filter the data on country, year and month. 
+ - visualize_covid_data(data): which can be used to visiualize a dataframe with covid data from get_and_process_covid_data().
+ - plot_covid(): combines the previous two functions to make a plot from
+ 
+More specific description of the functions can be found i
+
+
+devtools::install_github("twananas/CovidReportECDC")

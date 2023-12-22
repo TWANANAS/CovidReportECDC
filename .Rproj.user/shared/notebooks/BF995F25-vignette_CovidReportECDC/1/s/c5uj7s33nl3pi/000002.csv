@@ -1,0 +1,4 @@
+"0","coviddata_nl_2022_JanFebMar <-get_and_process_covid_data(country = ""Netherlands"", 2022, c(1,2,3) )  "
+"2","No encoding supplied: defaulting to UTF-8.
+"
+"0","coviddata_nl_2022_JanFebMar %>% head()"

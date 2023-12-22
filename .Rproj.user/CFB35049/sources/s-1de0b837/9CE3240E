@@ -1,0 +1,28 @@
+{
+    "id": "9CE3240E",
+    "path": "~/CovidReportECDC/vignettes/vignette_CovidReportECDC.Rmd",
+    "project_path": "vignettes/vignette_CovidReportECDC.Rmd",
+    "type": "r_markdown",
+    "hash": "3192323412",
+    "contents": "",
+    "dirty": false,
+    "created": 1703287888679.0,
+    "source_on_save": false,
+    "relative_order": 10,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "17,0",
+        "scrollLine": "4",
+        "last_setup_crc32": "1de0b83738d38edc"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1703289162,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1703289171433,
+    "read_only": false,
+    "read_only_alternatives": []
+}

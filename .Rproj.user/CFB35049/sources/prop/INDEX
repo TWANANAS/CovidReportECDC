@@ -1,3 +1,4 @@
+~%2FCovidReportECDC%2FDESCRIPTION="8D665827"
 ~%2FCovidReportECDC%2FNAMESPACE="9C6D1154"
 ~%2FCovidReportECDC%2FR%2FCombine_vis_data.R="D8DA8B38"
 ~%2FCovidReportECDC%2FR%2FFilter_data.R="B9AE726C"
@@ -6,4 +7,6 @@
 ~%2FCovidReportECDC%2FR%2Fhello.R="5E9B4E42"
 ~%2FCovidReportECDC%2FREADME.md="067A5FAF"
 ~%2FCovidReportECDC%2Fdata.csv="C79AFE12"
+~%2FCovidReportECDC%2Fman%2Fhello.Rd="3F2E66CD"
+~%2FCovidReportECDC%2Fvignettes%2Fvignette_CovidReportECDC.Rmd="391BCB29"
 ~%2Fcovid_report%2Fcovid_report.Rmd="F675D613"
