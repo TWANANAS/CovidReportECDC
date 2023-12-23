@@ -3,7 +3,7 @@ Type: Package
 Title: Create plots using the ECDC covid data
 Version: 0.1.0
 Author: Twan Samsom
-Maintainer: Twan.samsom@student.hu.nl
+Maintainer: Twan Samsom <Twan.samsom@student.hu.nl>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 License: MIT + file LICENSE
