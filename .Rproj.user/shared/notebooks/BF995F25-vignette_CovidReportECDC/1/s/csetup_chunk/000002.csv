@@ -1,5 +1,0 @@
-"0","knitr::opts_chunk$set(echo = TRUE)"
-"0","library(CovidReportECDC)"
-"2","Error in library(CovidReportECDC) : 
-  there is no package called ‘CovidReportECDC’
-"
